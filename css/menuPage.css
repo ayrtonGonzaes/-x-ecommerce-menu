@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Syne', sans-serif;
+}
+
+/*
+Extra bold 48 Titulo Saludos.
+bold 36,28,18,16 Titulo Personal info y need help
+semibold 22,18,16 
+medium 19,18 
+regular 17,16 
+*/
+
+/*Edicciones generales*/
+
+p {
+    font-weight: 500;
+    font-size: 1.063em; /*17px*/
+}
+
+a {
+    font-weight: 600;
+    font-size: 1.375em; /*22px*/
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+  
+a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+  
+a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*header*/
+.containerHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.logoHeader{
+    display: flex;
+    align-items: center;
+}
+
+.logoHeader img{
+    height: 100px;
+}
+
+.btnHeader{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
+.btnTraslate button {
+    min-width: 130px;
+    height: 40px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 4px 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #2a2a2a;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btnTraslate button:hover{
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.btnDollar button {
+    min-width: 130px;
+    height: 40px;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    padding: 4px 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #2a2a2a;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btnDollar button:hover{
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+/*fin de la ediccion header*/
+
+/*main*/
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #c6c6c6;
+}
+
+.img img{
+    height: 20vh;
+    border-radius: 5px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 58%;
+}
+
+.section button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.arrow-right{
+    font-size: 2em;
+}
+/*fin de la ediccion main*/
+
+/*footer*/
+.containerFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.iconFooter button{
+    width: 90px; 
+    height: 90px; 
+    background-color: transparent;
+    color: #000;
+    border: none; 
+    border-radius: 50%; 
+    text-align: center; 
+    font-size: 1.5em; 
+    line-height: 90px; 
+    cursor: pointer;  
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+}
+
+.iconFooter button:hover{
+    background-color: #000;
+    color: #fff;
+}
+/*fin de la ediccion footer*/
+
+/*ediccion celulares*/
+@media screen and (max-width:767px){
+    .containerHeader{
+        flex-direction: column;
+    }
+
+    .container{
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .containerFooter{
+        justify-content: center;
+    }
+
+    .textFooter {
+        display: none;
+    }
+}
